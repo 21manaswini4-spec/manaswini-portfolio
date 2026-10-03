@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manaswini Anand M | Computer Science Engineering Student</title>
+<meta name="description" content="Portfolio of Manaswini Anand M, a computer science engineering student in Bengaluru building software testing, cybersecurity and machine learning projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--ink:#16203a;--mute:#5a6580;--line:#dde2ee;--acc:#2b4eff;--acc2:#ff6b57;--tint:#e8edff}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1426;--card:#171d35;--ink:#eef1fb;--mute:#9aa5c4;--line:#2a3254;--acc:#7b94ff;--acc2:#ff8b7a;--tint:#1f2748}}
+:root[data-theme=dark]{--bg:#0f1426;--card:#171d35;--ink:#eef1fb;--mute:#9aa5c4;--line:#2a3254;--acc:#7b94ff;--acc2:#ff8b7a;--tint:#1f2748}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--bg);color:var(--ink);font:16px/1.65 Manrope,system-ui,sans-serif;padding-top:env(safe-area-inset-top,0)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font:700 20px Fraunces,serif}
+.logo b{color:var(--acc2)}
+.links{display:flex;gap:6px;align-items:center}
+.links a{padding:6px 12px;border-radius:99px;font-size:14px;color:var(--mute);transition:.2s}
+.links a:hover,.links a.on{background:var(--tint);color:var(--acc)}
+#theme{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;width:34px;height:34px;cursor:pointer;font-size:15px}
+#bar{position:fixed;top:0;left:0;height:3px;background:var(--acc2);width:0;z-index:11}
+section{padding:84px 0 20px}
+.hero{padding-top:140px;padding-bottom:20px;max-width:760px}
+.status{display:inline-flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:13px;color:var(--mute)}
+.status i{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #22c55e33}
+h1{font-size:clamp(38px,6vw,64px);margin:20px 0 16px}
+h1 span#type{color:var(--acc)}
+.cur{display:inline-block;width:3px;height:.9em;background:var(--acc2);margin-left:3px;vertical-align:-.08em;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.lead{color:var(--mute);max-width:560px;font-size:18px}
+.lead strong{color:var(--ink)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{padding:11px 20px;border-radius:12px;border:1px solid var(--line);background:var(--card);font-weight:700;font-size:14px;transition:.2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--acc);color:var(--acc)}
+.btn.pri{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn.pri:hover{color:#fff;box-shadow:0 8px 20px -6px var(--acc)}
+h2{font-size:clamp(28px,4vw,38px);margin-bottom:10px}
+.sub{color:var(--mute);max-width:560px;margin-bottom:34px}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:36px}
+.about p{color:var(--mute);margin-bottom:14px}
+.about p strong{color:var(--ink)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;transition:.25s}
+.fact:hover{transform:translateY(-4px);border-color:var(--acc)}
+.fact b{display:block;font:700 26px Fraunces,serif;color:var(--acc)}
+.fact small{color:var(--mute);font-size:13px;line-height:1.4;display:block}
+.tl{border-left:2px solid var(--line);padding-left:26px;display:grid;gap:18px}
+.tli{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;position:relative}
+.tli:before{content:"";position:absolute;left:-35px;top:26px;width:12px;height:12px;border-radius:50%;background:var(--acc2);border:3px solid var(--bg)}
+.tli h3{font-size:19px}.tli em{font-style:normal;color:var(--acc);font-weight:700;font-size:14px}
+.tli p{color:var(--mute);font-size:15px}
+.tli .d{float:right;color:var(--mute);font-size:13px}
+.proj{display:grid;gap:18px}
+.p{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.25s}
+.p:hover{border-color:var(--acc);box-shadow:0 14px 34px -18px var(--acc)}
+.ph{width:100%;text-align:left;background:none;border:0;color:inherit;font:inherit;padding:24px;cursor:pointer;display:flex;gap:16px;justify-content:space-between;align-items:flex-start}
+.ph h3{font-size:22px;margin:6px 0}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--acc2);background:color-mix(in srgb,var(--acc2) 14%,transparent);padding:3px 10px;border-radius:99px}
+.ph p{color:var(--mute);font-size:15px;max-width:640px}
+.chev{flex:none;width:34px;height:34px;border-radius:50%;background:var(--tint);color:var(--acc);display:grid;place-items:center;font-size:18px;transition:.3s}
+.p.open .chev{transform:rotate(180deg)}
+.pb{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}
+.p.open .pb{grid-template-rows:1fr}
+.pb>div{overflow:hidden}
+.pb ul{padding:0 24px 8px 44px;color:var(--mute);font-size:15px}
+.pb li{margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:6px 24px 22px}
+.chips span,.sk span{font-size:13px;background:var(--tint);color:var(--acc);padding:4px 12px;border-radius:8px;font-weight:500}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.sk{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.sk h3{font-size:17px;margin-bottom:12px}
+.sk div{display:flex;flex-wrap:wrap;gap:8px}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.cert{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;transition:.25s}
+.cert:hover{transform:translateY(-4px);border-color:var(--acc2)}
+.cert b{display:block;margin-bottom:4px}.cert small{color:var(--mute)}
+.contact{background:var(--acc);color:#fff;border-radius:28px;padding:48px 32px;text-align:center;margin-bottom:40px}
+.contact h2{color:#fff}
+.contact p{opacity:.9;margin:0 auto 24px;max-width:480px}
+.contact .btn{background:#fff;color:#1b2a78;border-color:#fff}
+.contact .btn:hover{color:#1b2a78;box-shadow:0 8px 20px -6px #0006}
+.contact .row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+footer{text-align:center;color:var(--mute);font-size:13px;padding:0 0 36px}
+.rv{opacity:0;transform:translateY(22px);transition:.7s}
+.rv.in{opacity:1;transform:none}
+@media (max-width:820px){.about{grid-template-columns:1fr}.links a{display:none}#theme{display:block}.links a.keep{display:inline-block}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav><div class="wrap"><a class="logo" href="#top">MA<b>.</b></a>
+<div class="links"><a href="#about">About</a><a href="#education">Education</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#certs">Certifications</a><a class="keep" href="#contact">Contact</a><button id="theme" aria-label="Toggle theme">◐</button></div></div></nav>
+
+<main id="top" class="wrap">
+<header class="hero">
+<div>
+<span class="status"><i></i>Open to internships and software roles</span>
+<h1>I build <span id="type"></span><span class="cur"></span></h1>
+<p class="lead"><strong>Computer Science Engineering student</strong> at K.S. Institute of Technology, Bengaluru. My projects span <strong>software testing, cybersecurity and medical image analysis</strong>, built mainly with <strong>Java and Python</strong>.</p>
+<div class="btns">
+<a class="btn pri" href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+<a class="btn" href="https://github.com/21manaswini4-spec" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/manaswini-anand-m-1726a7311" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a class="btn" href="#contact">Contact</a>
+</div></div>
+</header>
+
+<section id="about" class="rv">
+<h2>About me</h2>
+<p class="sub">Background and what I am focused on right now.</p>
+<div class="about">
+<div>
+<p>I am a <strong>third-year Computer Science and Engineering student</strong> in Bengaluru with a strong base in programming, data structures, database systems and web development.</p>
+<p>My projects cover <strong>software quality analysis, phishing detection and medical image analysis</strong>. Each one pairs a machine learning model with a working backend and interface.</p>
+<p>I am looking for a software development role where I can keep growing my problem-solving and engineering skills.</p>
+</div>
+<div class="facts">
+<div class="fact"><b>8.16</b><small>CGPA out of 10 (up to 6th semester)</small></div>
+<div class="fact"><b>3</b><small>Projects: Java, ML and deep learning</small></div>
+<div class="fact"><b>4</b><small>Certifications from Microsoft, Cisco, NPTEL and Anthropic</small></div>
+<div class="fact"><b>24h</b><small>National level offline hackathon, Hack2Skill</small></div>
+</div></div></section>
+
+<section id="education" class="rv">
+<h2>Education</h2>
+<p class="sub">Where I have studied.</p>
+<div class="tl">
+<div class="tli"><span class="d">2023 to present</span><h3>B.E. in Computer Science and Engineering</h3><em>K.S. Institute of Technology, Bengaluru</em><p>CGPA 8.16 / 10.0 up to the 6th semester.</p></div>
+<div class="tli"><span class="d">2021 to 2023</span><h3>Pre-University Education</h3><em>SSMRV PU College, Bengaluru</em><p>Percentage: 73.5%</p></div>
+<div class="tli"><span class="d">2017 to 2021</span><h3>SSLC</h3><em>Jnana Sweekar Public School, Bengaluru</em><p>Percentage: 87%</p></div>
+</div></section>
+
+<section id="work" class="rv">
+<h2>Projects</h2>
+<p class="sub">Select a project to see what I built and the tools I used.</p>
+<div class="proj">
+<article class="p open"><button class="ph" aria-expanded="true"><div><span class="tag">Software Testing + ML</span><h3>Risk-Informed Validation Framework for Java Maven Projects</h3><p>Builds a Java Maven project, runs its tests and ranks classes by defect risk so the riskiest get validated first.</p></div><span class="chev">⌄</span></button>
+<div class="pb"><div><ul>
+<li>Collects quality indicators from JUnit/Surefire, JaCoCo, PMD, SpotBugs and CK Metrics.</li>
+<li>Applies Python machine learning models to classify each class as HIGH, MEDIUM or LOW validation priority.</li>
+<li>Models validation activity with a MASON agent-based simulation, evaluated over 12 model-result records, 3 release transitions and 4 model configurations.</li>
+<li>Shows results in a React dashboard backed by a FastAPI service, containerized with Docker.</li></ul>
+<div class="chips"><span>Java</span><span>Maven</span><span>JUnit</span><span>JaCoCo</span><span>PMD</span><span>SpotBugs</span><span>MASON</span><span>Python</span><span>FastAPI</span><span>React</span><span>Docker</span></div></div></div></article>
+
+<article class="p"><button class="ph" aria-expanded="false"><div><span class="tag">Cybersecurity + ML</span><h3>Web Link Analyzer: Detech</h3><p>A web application that checks a submitted URL and reports its phishing risk.</p></div><span class="chev">⌄</span></button>
+<div class="pb"><div><ul>
+<li>Classifies links with TF-IDF features and a Naive Bayes model to flag suspicious and phishing URLs.</li>
+<li>Uses YOLOv8 and Tesseract OCR to analyze phishing screenshots and extract their text.</li>
+<li>FastAPI backend lets users submit a URL and receive an automated analysis.</li></ul>
+<div class="chips"><span>Python</span><span>FastAPI</span><span>TF-IDF</span><span>Naive Bayes</span><span>YOLOv8</span><span>Tesseract OCR</span></div></div></div></article>
+
+<article class="p"><button class="ph" aria-expanded="false"><div><span class="tag">Deep Learning</span><h3>NeuroVision AI: Retinal Image Analysis for Alzheimer’s Risk</h3><p>An AI-assisted application that estimates Alzheimer’s risk from retinal fundus images, for research use.</p></div><span class="chev">⌄</span></button>
+<div class="pb"><div><ul>
+<li>Applies CNN, ResNet and VGG16 transfer learning to extract features for risk classification.</li>
+<li>Preprocesses fundus images with OpenCV before analysis.</li>
+<li>Returns a prediction with confidence and probability information so the output is easy to interpret.</li></ul>
+<div class="chips"><span>Python</span><span>TensorFlow/Keras</span><span>CNN</span><span>ResNet</span><span>VGG16</span><span>OpenCV</span></div></div></div></article>
+</div></section>
+
+<section id="skills" class="rv">
+<h2>Skills</h2>
+<p class="sub">Tools and concepts I work with.</p>
+<div class="skills">
+<div class="sk"><h3>Languages</h3><div><span>C</span><span>Java</span><span>Python</span><span>HTML</span><span>CSS</span></div></div>
+<div class="sk"><h3>Frameworks and libraries</h3><div><span>FastAPI</span><span>React</span><span>TensorFlow/Keras</span><span>OpenCV</span><span>JUnit</span></div></div>
+<div class="sk"><h3>Core concepts</h3><div><span>Data Structures</span><span>DBMS</span><span>Computer Networks</span><span>Machine Learning</span></div></div>
+<div class="sk"><h3>Tools and platforms</h3><div><span>Git</span><span>GitHub</span><span>Docker</span><span>VS Code</span><span>Vercel</span></div></div>
+</div></section>
+
+<section id="certs" class="rv">
+<h2>Certifications and activities</h2>
+<p class="sub">Courses completed and what I have taken part in.</p>
+<div class="certs">
+<div class="cert"><b>Introduction to Computers, Operating Systems &amp; Security</b><small>Microsoft / Coursera</small></div>
+<div class="cert"><b>Networking Basics</b><small>Cisco Networking Academy</small></div>
+<div class="cert"><b>Introduction to Machine Learning</b><small>NPTEL, IIT Madras</small></div>
+<div class="cert"><b>Claude Code in Action</b><small>Anthropic</small></div>
+<div class="cert"><b>Hack2Skill National Hackathon</b><small>24-hour offline, JSS Academy of Technical Education, Bengaluru</small></div>
+<div class="cert"><b>NSS volunteer and marathons</b><small>Community service, awareness activities and marathons for social causes</small></div>
+</div></section>
+
+<section id="contact" class="rv">
+<div class="contact">
+<h2>Let’s work together</h2>
+<p>I am open to internships and entry-level software roles. Email me or open my resume.</p>
+<div class="row">
+<a class="btn" href="mailto:manurupa2006@gmail.com">manurupa2006@gmail.com</a>
+<a class="btn" href="tel:+917892827163">+91 78928 27163</a>
+<a class="btn" href="https://www.linkedin.com/in/manaswini-anand-m-1726a7311" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a class="btn" href="https://github.com/21manaswini4-spec" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a class="btn" href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+</div></div></section>
+</main>
+<footer>© <span id="yr"></span> Manaswini Anand M · Bengaluru, India</footer>
+
+<script>
+// typing effect
+const words=["machine learning projects.","software testing tools.","phishing detectors.","AI-powered tools."];
+const t=document.getElementById("type");let w=0,c=0,del=false;
+function tick(){const s=words[w];t.textContent=s.slice(0,c);
+if(!del&&c===s.length){del=true;return setTimeout(tick,1500)}
+if(del&&c===0){del=false;w=(w+1)%words.length}
+c+=del?-1:1;setTimeout(tick,del?35:75)}
+if(matchMedia("(prefers-reduced-motion:reduce)").matches){t.textContent=words[0]}else tick();
+// scroll progress + active nav
+const bar=document.getElementById("bar"),secs=[...document.querySelectorAll("main section")],lnk=[...document.querySelectorAll(".links a")];
+addEventListener("scroll",()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%";
+let cur="";secs.forEach(s=>{if(s.getBoundingClientRect().top<140)cur=s.id});
+lnk.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+cur))},{passive:true});
+// reveal
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+// project accordion
+document.querySelectorAll(".ph").forEach(b=>b.addEventListener("click",()=>{const p=b.parentElement,o=p.classList.toggle("open");b.setAttribute("aria-expanded",o)}));
+// theme
+const r=document.documentElement;
+try{const s=localStorage.getItem("theme");if(s)r.dataset.theme=s}catch(e){}
+document.getElementById("theme").addEventListener("click",()=>{
+const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+r.dataset.theme=dark?"light":"dark";try{localStorage.setItem("theme",r.dataset.theme)}catch(e){}});
+document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
